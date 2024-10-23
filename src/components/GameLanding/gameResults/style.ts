@@ -139,3 +139,13 @@ export const SwiperButton = styled.button<{ isActive: boolean }>`
   padding: 8px;
   opacity: ${({ isActive }) => (isActive ? 1 : 0.2)};
 `;
+
+export const Swiper = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+export const SwiperSlide = styled.div`
+  background-color: ${neutralDay.white};
+  width: 654px;
+  height: 437px;
+`;
