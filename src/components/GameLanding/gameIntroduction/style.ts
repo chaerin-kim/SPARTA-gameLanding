@@ -91,8 +91,8 @@ export const Desc = styled.p`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  gap: 14px;
-  overflow-x: scroll;
+  justify-content: center;
+  // overflow-x: scroll;
   &::-webkit-scrollbar {
     display: none;
   }

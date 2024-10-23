@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './style';
-import * as C from './copy';
 import Image from 'next/image';
 import { useIsMobile } from '@/hooks/customhooks';
 
@@ -12,17 +11,12 @@ export default function GameHobbyToCareer() {
   return (
     <S.Background>
       <S.Wrapper>
-        <S.TitleWrapper>
-          <S.Title>{C.Title}</S.Title>
-          <S.Desc>{C.Desc}</S.Desc>
-        </S.TitleWrapper>
-
         <S.ImageWrapper>
           <Image
             src={GAME_CDN_PATH + `introImg_${isMobile ? 'mo' : 'pc'}.webp`}
             alt="game_introduction"
-            width={isMobile ? 1168 : 820}
-            height={isMobile ? 285 : 518}
+            width={isMobile ? 430 : 820}
+            height={isMobile ? 774 : 585}
             unoptimized
           />
         </S.ImageWrapper>

@@ -13,14 +13,17 @@ function Results() {
 
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperCore>(null);
 
+  //수정 필요.
   useEffect(() => {
     if (swiperRef.current && prevRef.current && nextRef.current) {
-      swiperRef.current.params.navigation.prevEl = prevRef.current;
-      swiperRef.current.params.navigation.nextEl = nextRef.current;
-      swiperRef.current.navigation.init();
-      swiperRef.current.navigation.update();
+      if (swiperRef.current.params.navigation && typeof swiperRef.current.params.navigation === 'object') {
+        swiperRef.current.params.navigation.prevEl = prevRef.current;
+        swiperRef.current.params.navigation.nextEl = nextRef.current;
+        swiperRef.current.navigation.init();
+        swiperRef.current.navigation.update();
+      }
     }
   }, [prevRef, nextRef]);
 
