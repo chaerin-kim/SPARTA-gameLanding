@@ -19,7 +19,6 @@ export const Background = styled.section`
 
   background-color: ${neutralDay.gray100};
 
-  // swiper 관련 중요 !!
   overflow: hidden !important;
 
   .swiper {
@@ -82,10 +81,11 @@ export const SwiperSection = styled.section`
 
 export const DesktopSwiperButtonSection = styled.section`
   display: none;
-
+  position: absolute;
+  right: 300px;
+  bottom: -320px;
   ${forDesktop} {
     display: flex;
-    flex-direction: column;
     justify-content: end;
   }
 `;
@@ -146,6 +146,45 @@ export const Swiper = styled.div`
 `;
 export const SwiperSlide = styled.div`
   background-color: ${neutralDay.white};
-  width: 654px;
-  height: 437px;
+`;
+
+export const NavButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+`;
+
+export const PrevButton = styled(NavButton)`
+  margin-right: 10px;
+`;
+
+export const NextButton = styled(NavButton)`
+  margin-left: 10px;
+`;
+
+export const ArrowLeft = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid white;
+`;
+
+export const ArrowRight = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid white;
 `;

@@ -26,6 +26,7 @@ export const VideoContainer = styled.div`
   border-radius: 8px;
 
   transform: translateZ(0);
+  background-color: ${neutralDay.gray60};
 
   &:before {
     content: '';

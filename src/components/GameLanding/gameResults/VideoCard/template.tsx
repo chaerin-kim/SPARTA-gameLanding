@@ -3,9 +3,11 @@ import React from 'react';
 import { GameProject } from '../copy';
 import { usePlayActiveVideo } from '@/components/Swiper/logic';
 import AutoPlayVideo from '@/components/Swiper/AutoPlayVideo/template';
+// import game1 from '../../../../../public/videos/gameLanding/gameResult/resized_game_result_1.mp4';
 
 interface Props extends GameProject {
   isActive?: boolean;
+  cardIndex: number;
 }
 export function VideoCard({
   isActive = true,
